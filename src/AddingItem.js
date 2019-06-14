@@ -6,31 +6,53 @@ class AddingItem extends React.Component {
         super(props);
 
         this.state = {
+            term: '',
             items: []
         };
 
 
     }
 
+    onChange = (event) => {
+        this.setState({term:event.target.value})
+    };
+
+    onSubmit = (event) => {
+        event.preventDefault();
+
+        let newItem = {
+            text: this.state.term,
+            key: Date.now(),
+            stat: null
+        };
+
+        this.setState((prevState) => {
+            return {
+                term: '',
+                items:prevState.items.concat(newItem)}
+        });
+
+        console.log(this.state.items)
+    };
 
     render () {
         return (
             <div className='toDoListMain'>
                 <div className='header'>
-                    <form onSubmit={this.addItem}>
+                    <form onSubmit={this.onSubmit}>
                         <input
                             placeholder='enter task'
-
+                            value={this.state.term}
+                            onChange={this.onChange}
                         />
                     </form>
                 </div>
                 <TodoItems
-                    entries={this.state.items}
+                    items={this.state.items}
                 />
             </div>
         );
     }
-
 
 }
 
