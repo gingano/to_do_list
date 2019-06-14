@@ -56,7 +56,8 @@ class AddingItem extends React.Component {
                 <div className='header'>
                     <form onSubmit={this.onSubmit}>
                         <input
-                            placeholder='enter task'
+                            className='new-todo'
+                            placeholder='What needs to be done?'
                             value={this.state.term}
                             onChange={this.onChange}
                         />
