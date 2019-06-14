@@ -9,32 +9,8 @@ class AddingItem extends React.Component {
             items: []
         };
 
-        this.addItem = this.addItem.bind(this);
+
     }
-
-    addItem(e) {
-        if(this.inputElement.value !== '') {
-            let newItem = {
-                text: this.inputElement.value,
-                key: Date.now(),
-                stat: null
-            };
-
-            this.setState((prevState) => {
-                    return {
-                        items:prevState.items.concat(newItem)
-                    }
-                }
-            )
-        }
-
-        this.inputElement.value = '';
-
-        console.log(this.state.items);
-
-        e.preventDefault();
-    }
-
 
 
     render () {
@@ -44,7 +20,7 @@ class AddingItem extends React.Component {
                     <form onSubmit={this.addItem}>
                         <input
                             placeholder='enter task'
-                            ref={(a) => this.inputElement = a}
+
                         />
                     </form>
                 </div>
