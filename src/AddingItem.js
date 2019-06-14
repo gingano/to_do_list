@@ -35,6 +35,22 @@ class AddingItem extends React.Component {
         console.log(this.state.items)
     };
 
+    remove = (index) => {
+        this.state.items.splice(index, 1);
+        this.setState({
+            items: this.state.items
+        })
+    };
+
+    setStat = (index) => {
+        let done = 'done';
+        let copy = this.state;
+        copy[index].stat = done;
+        this.setState({
+            items: this.state.items
+        })
+    };
+
     render () {
         return (
             <div className='toDoListMain'>
@@ -48,6 +64,8 @@ class AddingItem extends React.Component {
                     </form>
                 </div>
                 <TodoItems
+                    setStat={(index) => {this.setStat(index)}}
+                    remove={(index) => {this.remove(index)}}
                     items={this.state.items}
                 />
             </div>
