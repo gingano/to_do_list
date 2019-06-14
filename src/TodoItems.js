@@ -8,19 +8,15 @@ class TodoItems extends React.Component {
         return (
             <ul className='theList'>
                 {
-                    this.props.items.map(
-                        (item, index) =>
-                            <li
-                                key={index}
-                            >
-                                <button
-                                    onClick={(index) => this.props.setStat(index)}
-                                />
-                                {item.text}
-                                <button
-                                    onClick={(index) => this.props.remove(index)}
-                                />
-                            </li>
+                    this.props.items.map((item, index) =>
+                        <li key={index}>
+                            <button onClick={() => {
+                                this.props.setStat(index);
+                                // console.log('after btn' + this.props.state[index].stat);
+                            }}/>
+                            {item.text}
+                            <button onClick={() => this.props.remove(index)}/>
+                        </li>
                     )
                 }
             </ul>

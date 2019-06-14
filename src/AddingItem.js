@@ -35,21 +35,20 @@ class AddingItem extends React.Component {
         console.log(this.state.items)
     };
 
-    remove = (index) => {
+    remove(index) {
         this.state.items.splice(index, 1);
         this.setState({
             items: this.state.items
         })
-    };
+    }
 
-    setStat = (index) => {
-        let done = 'done';
-        let copy = this.state;
-        copy[index].stat = done;
+    setStat(index) {
+        let copy = this.state.items;
+        copy[index].stat = 'done';
         this.setState({
             items: this.state.items
         })
-    };
+    }
 
     render () {
         return (
