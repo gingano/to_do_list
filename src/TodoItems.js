@@ -2,11 +2,11 @@ import React from 'react';
 
 class TodoItems extends React.Component {
     createTasks(item) {
-        return <li key={item.key}><button/>{item.text}</li>
+        return <li key={item.key}><button onClick={(key) => console.log(item.key)}/>{item.text}</li>
     }
 
     render() {
-        let todoEntries = this.props.entries
+        let todoEntries = this.props.entries;
         let listItems = todoEntries.map(this.createTasks);
 
         return (

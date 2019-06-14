@@ -7,7 +7,7 @@ class AddingItem extends React.Component {
 
         this.state = {
             items: []
-        }
+        };
 
         this.addItem = this.addItem.bind(this);
     }
@@ -16,7 +16,8 @@ class AddingItem extends React.Component {
         if(this.inputElement.value !== '') {
             let newItem = {
                 text: this.inputElement.value,
-                key: Date.now()
+                key: Date.now(),
+                stat: null
             };
 
             this.setState((prevState) => {
@@ -29,7 +30,7 @@ class AddingItem extends React.Component {
 
         this.inputElement.value = '';
 
-        console.log(this.state.items)
+        console.log(this.state.items);
 
         e.preventDefault();
     }
@@ -45,10 +46,11 @@ class AddingItem extends React.Component {
                             placeholder='enter task'
                             ref={(a) => this.inputElement = a}
                         />
-                        <button type='submit'/>
                     </form>
                 </div>
-                <TodoItems entries={this.state.items} />
+                <TodoItems
+                    entries={this.state.items}
+                />
             </div>
         );
     }
