@@ -20,17 +20,18 @@ class TodoItems extends React.Component {
                             key={index}
                             className={this.changeClassName(index)}
                         >
-                            <input
+                            <button
+                                className={this.changeClassName(index)+ '-btn'}
                                 type='checkbox'
-                                className='set-stat'
                                 onClick={() => {
                                 this.props.setStat(index);
                                 // console.log('after btn' + this.props.state[index].stat);
                             }}/>
-                            {item.text}
+                            <label>{item.text}</label>
                             <button
                                 className='remove'
-                                onClick={() => this.props.remove(index)}/>
+                                onClick={() => this.props.remove(index)}
+                            >✕</button>
                         </li>
                     )
                 }

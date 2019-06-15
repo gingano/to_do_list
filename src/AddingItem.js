@@ -43,11 +43,19 @@ class AddingItem extends React.Component {
     }
 
     setStat(index) {
+        if (this.state.items[index].stat === 'done') {
+            let copy = this.state.items;
+            copy[index].stat = null;
+            this.setState({
+                items: this.state.items
+            })
+        } else {
         let copy = this.state.items;
         copy[index].stat = 'done';
         this.setState({
             items: this.state.items
         })
+            }
     }
 
     render () {

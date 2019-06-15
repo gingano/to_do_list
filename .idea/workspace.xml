@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddingItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddingItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TodoItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoItems.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,7 +24,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="105">
               <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -37,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddingItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+            <state relative-caret-position="219">
+              <caret line="52" column="36" lean-forward="true" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -49,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TodoItems.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+            <state relative-caret-position="355">
+              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -58,8 +57,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+            <state relative-caret-position="324">
+              <caret line="147" column="15" selection-start-line="147" selection-start-column="15" selection-end-line="147" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -101,7 +100,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="640" />
     <option name="height" value="710" />
@@ -200,7 +199,8 @@
       <workItem from="1560268891642" duration="2664000" />
       <workItem from="1560408118538" duration="9974000" />
       <workItem from="1560433630024" duration="1152000" />
-      <workItem from="1560536516378" duration="16062000" />
+      <workItem from="1560536516378" duration="16290000" />
+      <workItem from="1560577124149" duration="4037000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1560268248519</created>
@@ -265,11 +265,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560550149512</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <created>1560554618567</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560554618567</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30874000" />
+    <option name="totallyTimeSpent" value="35139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -284,6 +291,7 @@
     <frame x="0" y="23" width="640" height="710" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="npm" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49865952" weight="0.5072698" />
       <window_info id="Structure" order="1" sideWeight="0.50259066" side_tool="true" weight="0.2494043" />
       <window_info id="Favorites" order="2" sideWeight="0.5013405" side_tool="true" weight="0.2494043" />
@@ -350,12 +358,12 @@
     <MESSAGE value=".gitignore" />
     <MESSAGE value="gh-pages" />
     <MESSAGE value="adding func" />
-    <MESSAGE value="update" />
     <MESSAGE value="I will do everything from scratch" />
     <MESSAGE value="adding lis" />
     <MESSAGE value="some update" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/index.html">
@@ -396,9 +404,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/unchecked.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="105">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -408,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddingItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="219">
+          <caret line="52" column="36" lean-forward="true" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -418,18 +429,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TodoItems.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+        <state relative-caret-position="355">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/unchecked.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="110" column="1" selection-start-line="110" selection-start-column="1" selection-end-line="110" selection-end-column="1" />
+        <state relative-caret-position="324">
+          <caret line="147" column="15" selection-start-line="147" selection-start-column="15" selection-end-line="147" selection-end-column="15" />
         </state>
       </provider>
     </entry>

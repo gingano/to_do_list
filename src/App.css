@@ -18,10 +18,6 @@ body {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-.done {
-  text-decoration: underline;
-}
-
 h1 {
   position: absolute;
   top: -155px;
@@ -37,7 +33,7 @@ h1 {
 
 .new-todo {
   padding: 16px 16px 16px 60px;
-  width: 86.2%;
+  width: 81%;
   height: 30px;
   font-size: 25px;
   font-style: italic;
@@ -83,8 +79,8 @@ input {
 }
 
 .normal {
-  width: 86.2%;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   font-size: 25px;
   list-style-type: none;
   border-bottom: 1px solid #ededed;
@@ -95,17 +91,115 @@ input {
   padding: 0;
 }
 
-.set-stat {
+.normal-btn {
   height: 40px;
   width: 40px;
-}
-
-input[type="checkbox"] {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
   background: url(./img/unchecked.svg) no-repeat;
   cursor: pointer;
+  border: none;
+  margin: 10px 0;
+  outline: none;
+}
+
+.normal label {
+  word-break: break-all;
+  padding: 15px 15px 15px 23px;
+  line-height: 1.2;
+  transition: color 0.4s;
+  position: relative;
+  top: -9px;
+}
+
+.remove {
+  visibility: hidden;
+}
+
+.normal:hover .remove {
+  visibility: visible;
+  position: relative;
+  float: right;
+  top: 8px;
+  right: 5px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 30px;
+  font-weight: 100;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.normal:hover .remove:hover {
+  color: #d4453c;
+}
+
+
+.done {
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  list-style-type: none;
+  border-bottom: 1px solid #ededed;
+}
+
+.done-btn {
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: 0;
+  top: 0;
+  background: url(./img/checked.svg) no-repeat;
+  cursor: pointer;
+  border: none;
+  margin: 10px 0;
+  outline: none;
+}
+
+.done label {
+  word-break: break-all;
+  padding: 15px 15px 15px 23px;
+  line-height: 1.2;
+  transition: color 0.4s;
+  position: relative;
+  top: -9px;
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+
+.remove {
+  visibility: hidden;
+}
+
+.done:hover .remove {
+  visibility: visible;
+  position: relative;
+  float: right;
+  top: 8px;
+  right: 5px;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 30px;
+  font-weight: 100;
+  color: #cc9a9a;
+  margin-bottom: 11px;
+  transition: color 0.2s ease-out;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.done:hover .remove:hover {
+  color: #d4453c;
 }
