@@ -119,6 +119,8 @@ class AddingItem extends React.Component {
         })
     }
 
+
+
     clearCompleted() {
         for (let i = 0; i < this.state.items.length; i++) {
             if(this.state.items[i].stat === 'done') {
@@ -126,6 +128,7 @@ class AddingItem extends React.Component {
                 this.setState({
                     items: this.state.items
                 })
+                i--;
             }
         }
     }
