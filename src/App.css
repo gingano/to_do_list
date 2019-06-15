@@ -31,6 +31,43 @@ h1 {
   text-rendering: optimizeLegibility;
 }
 
+.arrow-btn {
+    width: 60px;
+    height: 34px;
+    font-size: 24px;
+    position: absolute;
+    top: 14px;
+    left: -7px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #e6e6e6;
+    transition: 0.5s;
+}
+
+.arrow-btn:hover {
+    color: #d1d1d1;
+    transition: 0.5s;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.arrow-btn-all-done {
+    width: 60px;
+    height: 34px;
+    font-size: 24px;
+    position: absolute;
+    top: 14px;
+    left: -7px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #646464;
+    transition: 0.5s;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
 .new-todo {
   padding: 16px 16px 16px 60px;
   width: 86%;
@@ -92,6 +129,7 @@ input {
 }
 
 .normal-btn {
+  transition: 0.2s;
   height: 40px;
   width: 40px;
   position: relative;
@@ -152,6 +190,7 @@ input {
 }
 
 .done-btn {
+  transition: 0.2s;
   height: 40px;
   width: 40px;
   position: relative;
