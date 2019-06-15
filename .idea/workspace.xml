@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b048b381-988a-48ac-a20f-a1e21678b245" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddingItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddingItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoItems.js" afterDir="false" />
-    </list>
+    <list default="true" id="b048b381-988a-48ac-a20f-a1e21678b245" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -46,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AddingItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="120" column="4" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
+            <state relative-caret-position="61">
+              <caret line="122" column="51" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#setStat#0;n#AddingItem#0" />
@@ -223,7 +217,7 @@
       <workItem from="1560433630024" duration="1152000" />
       <workItem from="1560536516378" duration="16290000" />
       <workItem from="1560577124149" duration="9173000" />
-      <workItem from="1560592581906" duration="12581000" />
+      <workItem from="1560592581906" duration="13220000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <created>1560268248519</created>
@@ -316,11 +310,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560588722977</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="sorting func">
+      <created>1560611362424</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560611362425</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52856000" />
+    <option name="totallyTimeSpent" value="53495000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,7 +410,8 @@
     <MESSAGE value="styling" />
     <MESSAGE value="some update" />
     <MESSAGE value="some update css" />
-    <option name="LAST_COMMIT_MESSAGE" value="some update css" />
+    <MESSAGE value="sorting func" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorting func" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -486,8 +488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddingItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="120" column="4" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
+        <state relative-caret-position="61">
+          <caret line="122" column="51" selection-start-line="122" selection-start-column="51" selection-end-line="122" selection-end-column="51" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="n#!!block;n#setStat#0;n#AddingItem#0" />
