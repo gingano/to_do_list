@@ -8,7 +8,8 @@ class AddingItem extends React.Component {
 
         this.state = {
             term: '',
-            items: []
+            items: [],
+            sorting: 'all'
         };
 
 
@@ -58,7 +59,7 @@ class AddingItem extends React.Component {
     }
 
     doneAll() {
-            this.state.items.forEach((element, index, arr) => {
+            this.state.items.forEach((element, index) => {
             if (this.state.items[index].stat === 'done') {
                 let copy = this.state.items;
                 copy[index].stat = null;
@@ -77,7 +78,7 @@ class AddingItem extends React.Component {
 
     arrowBtnAllDone(counter) {
         counter = 0;
-        this.state.items.forEach((element, index, arr) => {
+        this.state.items.forEach((element, index) => {
 
             if (this.state.items[index].stat === 'done') {
                 counter++
@@ -92,6 +93,41 @@ class AddingItem extends React.Component {
         }
 
         return 'arrow-btn'
+    }
+
+    sortByAll() {
+        let copy = this.state;
+        copy.sorting = 'all';
+        this.setState({
+            sorting: this.state.sorting
+        })
+    }
+
+    sortByActive() {
+        let copy = this.state;
+        copy.sorting = 'active';
+        this.setState({
+            sorting: this.state.sorting
+        })
+    }
+
+    sortByCompleted() {
+        let copy = this.state;
+        copy.sorting = 'completed';
+        this.setState({
+            sorting: this.state.sorting
+        })
+    }
+
+    clearCompleted() {
+        for (let i = 0; i < this.state.items.length; i++) {
+            if(this.state.items[i].stat === 'done') {
+                this.state.items.splice(i, 1);
+                this.setState({
+                    items: this.state.items
+                })
+            }
+        }
     }
 
     render () {
@@ -115,9 +151,18 @@ class AddingItem extends React.Component {
                     setStat={(index) => {this.setStat(index)}}
                     remove={(index) => {this.remove(index)}}
                     items={this.state.items}
+                    sorting={this.state.sorting}
                 />
 
-                <Footer />
+                <Footer
+                    sortByAll={() => {this.sortByAll()}}
+                    sortByActive={() => {this.sortByActive()}}
+                    sortByCompleted={() => {this.sortByCompleted()}}
+                    clearCompleted={() => {this.clearCompleted()}}
+                    items={this.state.items}
+                    sorting={this.state.sorting}
+                    state={this.state}
+                />
             </div>
         );
     }

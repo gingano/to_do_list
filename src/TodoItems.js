@@ -4,6 +4,12 @@ class TodoItems extends React.Component {
     props: TodoItems.props;
 
     changeClassName = (index) => {
+        if(this.props.sorting === 'active' && this.props.items[index].stat === 'done') {
+            return 'active-done'
+        }
+        if(this.props.sorting === 'completed' && this.props.items[index].stat === null) {
+            return 'completed-done'
+        }
         if (this.props.items[index].stat === 'done') {
             return 'done'
         } else {
@@ -19,6 +25,7 @@ class TodoItems extends React.Component {
                         <li
                             key={index}
                             className={this.changeClassName(index)}
+
                         >
                             <button
                                 className={this.changeClassName(index)+ '-btn'}
