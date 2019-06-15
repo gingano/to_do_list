@@ -17,6 +17,14 @@ class TodoItems extends React.Component {
         }
     };
 
+    doubleClickClassName(index) {
+        if (this.props.items[index].visibility === 'visible') {
+            console.log(this.props.items[index].visibility);
+            return 'visible-input'
+        }
+        return 'hidden-input'
+    }
+
     render() {
         return (
             <ul className='theList'>
@@ -25,16 +33,22 @@ class TodoItems extends React.Component {
                         <li
                             key={index}
                             className={this.changeClassName(index)}
-
+                            onDoubleClick={() => this.props.editItem(index)}
                         >
                             <button
                                 className={this.changeClassName(index)+ '-btn'}
                                 type='checkbox'
                                 onClick={() => {
                                 this.props.setStat(index);
-                                // console.log('after btn' + this.props.state[index].stat);
                             }}/>
                             <label>{item.text}</label>
+
+                            <input
+                                onSubmit={this.props.changeOnSubmit(index)}
+                                type="text"
+                                className={this.doubleClickClassName(index)}
+
+                            />
                             <button
                                 className='remove'
                                 onClick={() => this.props.remove(index)}

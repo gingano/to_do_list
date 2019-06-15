@@ -19,13 +19,15 @@ class AddingItem extends React.Component {
         this.setState({term:event.target.value})
     };
 
+
     onSubmit = (event) => {
         event.preventDefault();
 
         let newItem = {
             text: this.state.term,
             key: Date.now(),
-            stat: null
+            stat: null,
+            visibility: null
         };
 
         this.setState((prevState) => {
@@ -127,10 +129,24 @@ class AddingItem extends React.Component {
                 this.state.items.splice(i, 1);
                 this.setState({
                     items: this.state.items
-                })
+                });
                 i--;
             }
         }
+    }
+
+    editItem(index) {
+        console.log(this.state.items[index].visibility);
+        let copy = this.state.items;
+        copy[index].visibility = 'visible';
+        this.setState({
+            items: this.state.items
+        });
+        console.log(this.state.items[index].visibility);
+    }
+
+    changeOnSubmit(index) {
+
     }
 
     render () {
@@ -155,6 +171,8 @@ class AddingItem extends React.Component {
                     remove={(index) => {this.remove(index)}}
                     items={this.state.items}
                     sorting={this.state.sorting}
+                    editItem={(index) => {this.editItem(index)}}
+                    changeOnSubmit={(index) => this.changeOnSubmit(index)}
                 />
 
                 <Footer
