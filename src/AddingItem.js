@@ -135,20 +135,6 @@ class AddingItem extends React.Component {
         }
     }
 
-    editItem(index) {
-        console.log(this.state.items[index].visibility);
-        let copy = this.state.items;
-        copy[index].visibility = 'visible';
-        this.setState({
-            items: this.state.items
-        });
-        console.log(this.state.items[index].visibility);
-    }
-
-    changeOnSubmit(index) {
-
-    }
-
     render () {
         return (
             <div className='toDoListMain'>
@@ -171,8 +157,6 @@ class AddingItem extends React.Component {
                     remove={(index) => {this.remove(index)}}
                     items={this.state.items}
                     sorting={this.state.sorting}
-                    editItem={(index) => {this.editItem(index)}}
-                    changeOnSubmit={(index) => this.changeOnSubmit(index)}
                 />
 
                 <Footer

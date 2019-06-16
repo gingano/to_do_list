@@ -405,15 +405,3 @@ input {
   width: 0;
   height: 0;
 }
-
-.hidden-input {
-  visibility: hidden;
-}
-
-.visible-input {
-  position: absolute;
-  width: 67%;
-  height: 54px;
-  left: 60px;
-  font-size: 25px;
-}
