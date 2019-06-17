@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import AddingItem from './AddingItem'
+import TodoList from './TodoList'
 
 function App() {
   return (
     <div className="App">
         <h1>todos</h1>
-        <AddingItem />
+        <TodoList />
     </div>
   );
 }

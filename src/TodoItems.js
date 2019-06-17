@@ -1,35 +1,33 @@
 import React from 'react';
 
 class TodoItems extends React.Component {
-    props: TodoItems.props;
 
     changeClassName = (index) => {
-        if(this.props.sorting === 'active' && this.props.items[index].stat === 'done') {
+        const {filter, items} = this.props;
+        if (filter === 'active' && items[index].done) {
             return 'active-done'
         }
-        if(this.props.sorting === 'completed' && this.props.items[index].stat === null) {
+        if (filter === 'completed' && !items[index].done) {
             return 'completed-done'
         }
-        if (this.props.items[index].stat === 'done') {
-            return 'done'
-        } else {
-            return 'normal'
+        if (items[index].done) {
+            return 'done';
         }
+        return 'normal';
     };
 
     render() {
         return (
             <ul className='theList'>
                 {
-                    this.props.items.map((item, index) =>
+                    this.props.state.items.map((item, index) =>
                         <li
                             key={index}
                             className={this.changeClassName(index)}
-                            onDoubleClick={() => this.props.editItem(index)}
                         >
                             <button
                                 className={this.changeClassName(index)+ '-btn'}
-                                type='checkbox'
+                                type='button'
                                 onClick={() => {
                                 this.props.setStat(index);
                             }}/>

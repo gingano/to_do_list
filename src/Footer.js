@@ -1,77 +1,42 @@
 import React from 'react';
 
 class Footer extends React.Component {
-    props: Footer.props;
-
-    footerClassName() {
-        if (this.props.items.length > 0) {
-            return 'footer-active'
-        }
-        return 'footer-disabled'
-    }
-
-    allBtnClassName() {
-        if(this.props.sorting === "all") {
-            return 'selected all'
-        }
-        return 'all'
-    }
-
-    activeBtnClassName() {
-        if(this.props.sorting === "active") {
-            return 'selected active'
-        }
-        return 'active'
-    }
-    completedBtnClassName() {
-        if(this.props.sorting === "completed") {
-            return 'selected completed'
-        }
-        return 'completed'
-    }
 
     countActive() {
-        let counter = 0;
-        this.props.items.forEach((element, index) => {
-
-            if (this.props.items[index].stat !== 'done') {
-                counter++
-            }
-        });
-
-
-        return counter;
+        return this.props.state.items.filter(
+            (item) => item.done === false
+        ).length
     }
 
 
 
     render() {
         return (
-            <footer className={this.footerClassName()}>
+            <footer className={this.props.state.items.length > 0 ? 'footer-active' : 'footer-disabled'}>
                 <div className='counter'>
                     {this.countActive()} item left
                 </div>
                 <ul className='filters'>
                     <li>
                         <button
-                        className={this.allBtnClassName()}
-                        onClick={() => {this.props.sortByAll()}}
+                        className={this.props.state.filter === 'all' ? 'selected all' : null}
+                        onClick={() => {this.props.filterBy('all')}}
                     >
                             All
                         </button>
                     </li>
                     <li>
                         <button
-                            className={this.activeBtnClassName()}
-                            onClick={() => {this.props.sortByActive()}}
+                            className={this.props.state.filter === 'active' ? 'selected active' : null}
+                            onClick={() => {this.props.filterBy('active')}}
                     >
                             Active
                         </button>
                     </li>
                     <li>
                         <button
-                        className={this.completedBtnClassName()}
-                        onClick={() => {this.props.sortByCompleted()}}
+                        className={this.props.state.filter === 'completed' ? 'selected completed' : null}
+                        onClick={() => {this.props.filterBy('completed')}}
                     >
                             Completed
                         </button>

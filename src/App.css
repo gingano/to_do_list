@@ -47,7 +47,7 @@ h1 {
 
 .arrow-btn:hover {
     color: #d1d1d1;
-    transition: 0.5s;
+    transition: transform 0.5s;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
@@ -112,7 +112,6 @@ input {
   text-align: start;
   margin: 0em;
   font: 400 11px system-ui;
-  -webkit-writing-mode: horizontal-tb !important;
 }
 
 .normal {
@@ -153,6 +152,7 @@ input {
 
 .remove {
   visibility: hidden;
+  color: #cc9a9a;
 }
 
 .normal:hover .remove {
