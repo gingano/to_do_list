@@ -17,24 +17,25 @@ class TodoItems extends React.Component {
     };
 
     render() {
+        const {items} = this.props;
         return (
             <ul className='theList'>
                 {
-                    this.props.state.items.map((item, index) =>
+                    items.map((item, index) =>
                         <li
-                            key={index}
+                            key={item.id}
                             className={this.changeClassName(index)}
                         >
                             <button
                                 className={this.changeClassName(index)+ '-btn'}
                                 type='button'
                                 onClick={() => {
-                                this.props.setStat(index);
+                                this.props.toggleStatus(item.id);
                             }}/>
                             <label>{item.text}</label>
                             <button
                                 className='remove'
-                                onClick={() => this.props.remove(index)}
+                                onClick={() => this.props.remove(item.id)}
                             >✕</button>
                         </li>
                     )

@@ -3,7 +3,7 @@ import React from 'react';
 class Footer extends React.Component {
 
     countActive() {
-        return this.props.state.items.filter(
+        return this.props.items.filter(
             (item) => item.done === false
         ).length
     }
@@ -11,15 +11,16 @@ class Footer extends React.Component {
 
 
     render() {
+    const {items, state} = this.props;
         return (
-            <footer className={this.props.state.items.length > 0 ? 'footer-active' : 'footer-disabled'}>
+            <footer className={items.length > 0 ? 'footer-active' : 'footer-disabled'}>
                 <div className='counter'>
                     {this.countActive()} item left
                 </div>
                 <ul className='filters'>
                     <li>
                         <button
-                        className={this.props.state.filter === 'all' ? 'selected all' : null}
+                        className={state.filter === 'all' ? 'selected all' : null}
                         onClick={() => {this.props.filterBy('all')}}
                     >
                             All
@@ -27,7 +28,7 @@ class Footer extends React.Component {
                     </li>
                     <li>
                         <button
-                            className={this.props.state.filter === 'active' ? 'selected active' : null}
+                            className={state.filter === 'active' ? 'selected active' : null}
                             onClick={() => {this.props.filterBy('active')}}
                     >
                             Active
@@ -35,7 +36,7 @@ class Footer extends React.Component {
                     </li>
                     <li>
                         <button
-                        className={this.props.state.filter === 'completed' ? 'selected completed' : null}
+                        className={state.filter === 'completed' ? 'selected completed' : null}
                         onClick={() => {this.props.filterBy('completed')}}
                     >
                             Completed
